@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Folder Include="ConveyorBelts\" />
+    <Folder Include="LuckPickaxe\" />
     <Folder Include="SeedBarrel\" />
     <Folder Include="NyElectrics\" />
   </ItemGroup>
