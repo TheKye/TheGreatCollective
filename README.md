@@ -26,11 +26,11 @@ To Download the Files Click Code, Download Zip, Then Find the Folder you would l
 
 # Available Mods 
 
-**NyElectrics** - Eco Version: 9.4.3
+[**(NyElectrics)**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/NyElectrics) - Eco Version: 9.4.3
 
-**Seed Barrel** - Eco Version 9.4.3
+[**Seed Barrel**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/SeedBarrel) - Eco Version 9.4.3
 
-**Conveyor Belts** - Eco Version 9.4.3 - Open Source Version [Here](https://github.com/Elec0/eco-mods/tree/main/ConveyorBeltUpdate)
+[**Conveyor Belts**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/ConveyorBelts) - Eco Version 9.4.3 - Open Source Version [Here](https://github.com/Elec0/eco-mods/tree/main/ConveyorBeltUpdate)
 
 # Credits
 
