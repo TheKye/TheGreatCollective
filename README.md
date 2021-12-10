@@ -54,10 +54,10 @@ Conveyor Belts - MisterAl3x
 Lucky Pickaxe - SirA.Lmao
 
 ## Contributors
-NyElectrics - Abrasivehorizon
+NyElectrics 
+- Abrasivehorizon
 
-Conveyor Belts - Elec0
-
-Conveyor Belts - Keishee
-
-Conveyor Belts - Xanhou
+Conveyor Belts 
+- Elec0
+- Keishee
+- Xanhou
