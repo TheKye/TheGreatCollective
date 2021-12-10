@@ -32,7 +32,7 @@ To Download the Files Click Code, Download Zip, Then Find the Folder you would l
 
 [**Conveyor Belts**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/ConveyorBelts) - Eco Version 9.4.3 - Open Source Version [Here](https://github.com/Elec0/eco-mods/tree/main/ConveyorBeltUpdate)
 
-[**Lucky Pickaxe**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/LuckyPickaxe) - Eco Version: 9.4.3
+[**Lucky Pickaxe**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/LuckPickaxe) - Eco Version: 9.4.3
 
 # Wanna See a mod on here?
 
