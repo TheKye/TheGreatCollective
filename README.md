@@ -3,6 +3,12 @@ The Great Collective is a Massive Repository Of Old Abandoned Mods for Eco/Eco M
 
 Some of these mods May be present Here without the Original Creators Permission, However Only Open Source Mods will appear here, 
 
+# Is Your Mod Listed Here?
+
+Have i added your mod here and you no longer want it on here? No Problem!! 
+
+Just open up an Issue and i will remove it for you
+
 # Important Information
 Anyone is allowed to comit to this repo, You are NOT allowed to Remove ANY Credits in this readme, 
 
