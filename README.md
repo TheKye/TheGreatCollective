@@ -24,7 +24,7 @@ To Download the Files Click Code, Download Zip, Then Find the Folder you would l
 
 **Seed Barrel** - Eco Version 9.4.3
 
-**Conveyor Belts** - Eco Version 9.4.3
+**Conveyor Belts** - Eco Version 9.4.3 - Open Source Version [Here](https://github.com/Elec0/eco-mods/tree/main/ConveyorBeltUpdate)
 
 # Credits
 
