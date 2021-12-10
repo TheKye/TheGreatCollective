@@ -32,6 +32,14 @@ To Download the Files Click Code, Download Zip, Then Find the Folder you would l
 
 [**Conveyor Belts**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/ConveyorBelts) - Eco Version 9.4.3 - Open Source Version [Here](https://github.com/Elec0/eco-mods/tree/main/ConveyorBeltUpdate)
 
+# Wanna See a mod on here?
+
+Open up a new Issue with a link to the Mod, The Mod Can't be a compiled mod unless it is open source (.dll file) and i will have a look at it
+
+Please note while the code can be updated not all the unity files may work with the later versions of eco, so while the code can be salvaged not all the unity files can,
+
+i will not be doing unity work in this repo just code work
+
 # Credits
 
 ## Original Creators
