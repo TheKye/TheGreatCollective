@@ -1,24 +1,24 @@
 namespace Eco.Mods.TechTree
 {
-// [DoNotLocalize]
-using System;
-using System.Collections.Generic;
-using Eco.Gameplay.Components;
-using Eco.Gameplay.Items;
-using Eco.Gameplay.Skills;
-using Eco.Gameplay.Systems.TextLinks;
-using Eco.Gameplay.Systems.Tooltip;
-using Eco.Shared.Localization;
-using Eco.Shared.Serialization;
+    // [DoNotLocalize]
+    using System;
+    using System.Collections.Generic;
+    using Eco.Gameplay.Components;
+    using Eco.Gameplay.Items;
+    using Eco.Gameplay.Skills;
+    using Eco.Gameplay.Systems.TextLinks;
+    using Eco.Gameplay.Systems.Tooltip;
+    using Eco.Shared.Localization;
+    using Eco.Shared.Serialization;
 
-[Serialized]
-[LocDisplayName("Conveyor Belt")]
-[Weight(100)]
-public partial class ConveyorBeltItem : WorldObjectItem<ConveyorBeltObject>
-{
-    public override LocString DisplayDescription { get { return Localizer.DoStr("Convey things with belts"); } }
+    [Serialized]
+    [LocDisplayName("Conveyor Belt")]
+    [Weight(100)]
+    public partial class ConveyorBeltItem : WorldObjectItem<ConveyorBeltObject>
+    {
+        public override LocString DisplayDescription => Localizer.DoStr("Convey things with belts");
 
-    static ConveyorBeltItem() { }
+        static ConveyorBeltItem() { }
     }
 
     [RequiresSkill(typeof(IndustrySkill), 1)]
