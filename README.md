@@ -34,6 +34,8 @@ To Download the Files Click Code, Download Zip, Then Find the Folder you would l
 
 [**Lucky Pickaxe**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/LuckPickaxe) - Eco Version: 9.4.3
 
+[**Modern Solar Panels**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/ModernSolarPanels) - Eco Version: 9.4.3
+
 # Wanna See a mod on here?
 
 Open up a new Issue with a link to the Mod, The Mod Can't be a compiled mod unless it is open source (.dll file) and i will have a look at it
@@ -52,6 +54,8 @@ Seed Barrel - elbow_bump_lux
 Conveyor Belts - MisterAl3x
 
 Lucky Pickaxe - SirA.Lmao
+
+Modern Solarpanels - SnowHells
 
 ## Contributors
 NyElectrics 
