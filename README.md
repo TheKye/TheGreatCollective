@@ -45,7 +45,7 @@ i will not be doing unity work in this repo just code work
 # Credits
 
 ## Original Creators
-NyElectrics - Tedox
+NyElectrics - [Tedox](https://eco-mods.tedox.dev/)
 
 Seed Barrel - elbow_bump_lux
 
