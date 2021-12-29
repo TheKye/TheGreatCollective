@@ -33,8 +33,8 @@ namespace Eco.Mods.TechTree
             this.Recipes = new List<Recipe>
             {
                 new Recipe(
-                    "IronPickaxe",
-                    Localizer.DoStr("Iron Pickaxe"),
+                    "IronLuckyPickaxe",
+                    Localizer.DoStr("Iron Lucky Pickaxe"),
                     new IngredientElement[]
                     {
                new IngredientElement(typeof(IronBarItem), 4, typeof(SmeltingSkill), typeof(SmeltingLavishResourcesTalent)),

@@ -84,7 +84,7 @@ namespace Eco.Mods.TechTree
         public static HomeFurnishingValue HousingVal => new()
         {
             Category = RoomCategory.Industrial,
-            TypeForRoomLimit = Localizer.DoStr(""),
+            TypeForRoomLimit = Localizer.DoStr("Solar"),
         };
 
         [Tooltip(8)] private static LocString PowerProductionTooltip => new(string.Format(Localizer.DoStr("Produces: {0}w"), Text.Info(800)));
