@@ -4,7 +4,7 @@
 
 namespace Eco.Mods.TechTree
 {
-     using System;
+    using System;
     using System.Collections.Generic;
     using System.ComponentModel;
     using Eco.Core.Items;
@@ -54,20 +54,16 @@ namespace Eco.Mods.TechTree
     [RequireComponent(typeof(SolidGroundComponent))]
     [RequireComponent(typeof(LiquidConverterComponent))]
     [RequireComponent(typeof(PluginModulesComponent))]
-    public partial class NyElectricBlastFurnaceObject :
-        WorldObject,
-        IRepresentsItem
+    public partial class NyElectricBlastFurnaceObject : WorldObject, IRepresentsItem
     {
-        public override LocString DisplayName { get { return Localizer.DoStr("Electric Blast Furnace"); } }
+        public override LocString DisplayName => Localizer.DoStr("Electric Blast Furnace");
 
         public override TableTextureMode TableTexture => TableTextureMode.Metal;
 
-        public virtual Type RepresentedItemType { get { return typeof(NyElectricBlastFurnaceItem); } }
-
+        public virtual Type RepresentedItemType => typeof(NyElectricBlastFurnaceItem);
 
         protected override void Initialize()
         {
-
             this.GetComponent<MinimapComponent>().Initialize(Localizer.DoStr("Crafting"));
             this.GetComponent<PowerGridComponent>().Initialize(10, new ElectricPower());
             this.GetComponent<PowerConsumptionComponent>().Initialize(3000f);
@@ -85,29 +81,67 @@ namespace Eco.Mods.TechTree
 
         static NyElectricBlastFurnaceObject()
         {
-            WorldObject.AddOccupancy<NyElectricBlastFurnaceObject>(new List<BlockOccupancy>() { new BlockOccupancy(new Vector3i(1, 4, 1), typeof(PipeSlotBlock), new Quaternion(-0.7071071f, 2.634177E-07f, 2.634179E-07f, 0.7071065f), "ChimneyOut"), new BlockOccupancy(new Vector3i(2, 0, 2), typeof(PipeSlotBlock), new Quaternion(0f, 0f, 0f, 1f), "WaterInputPort"), new BlockOccupancy(new Vector3i(0, 0, 0), typeof(PipeSlotBlock), new Quaternion(0f, -0.7071068f, 0f, 0.7071068f), "SewageOutputPort"), new BlockOccupancy(new Vector3i(0, 0, 1)), new BlockOccupancy(new Vector3i(0, 0, 2)), new BlockOccupancy(new Vector3i(0, 1, 0)), new BlockOccupancy(new Vector3i(0, 1, 1)), new BlockOccupancy(new Vector3i(0, 1, 2)), new BlockOccupancy(new Vector3i(0, 2, 0)), new BlockOccupancy(new Vector3i(0, 2, 1)), new BlockOccupancy(new Vector3i(0, 2, 2)), new BlockOccupancy(new Vector3i(0, 3, 0)), new BlockOccupancy(new Vector3i(0, 3, 1)), new BlockOccupancy(new Vector3i(0, 3, 2)), new BlockOccupancy(new Vector3i(0, 4, 0)), new BlockOccupancy(new Vector3i(0, 4, 1)), new BlockOccupancy(new Vector3i(0, 4, 2)), new BlockOccupancy(new Vector3i(1, 0, 0)), new BlockOccupancy(new Vector3i(1, 0, 1)), new BlockOccupancy(new Vector3i(1, 0, 2)), new BlockOccupancy(new Vector3i(1, 1, 0)), new BlockOccupancy(new Vector3i(1, 1, 1)), new BlockOccupancy(new Vector3i(1, 1, 2)), new BlockOccupancy(new Vector3i(1, 2, 0)), new BlockOccupancy(new Vector3i(1, 2, 1)), new BlockOccupancy(new Vector3i(1, 2, 2)), new BlockOccupancy(new Vector3i(1, 3, 0)), new BlockOccupancy(new Vector3i(1, 3, 1)), new BlockOccupancy(new Vector3i(1, 3, 2)), new BlockOccupancy(new Vector3i(1, 4, 0)), new BlockOccupancy(new Vector3i(1, 4, 2)), new BlockOccupancy(new Vector3i(2, 0, 0)), new BlockOccupancy(new Vector3i(2, 0, 1)), new BlockOccupancy(new Vector3i(2, 1, 0)), new BlockOccupancy(new Vector3i(2, 1, 1)), new BlockOccupancy(new Vector3i(2, 1, 2)), new BlockOccupancy(new Vector3i(2, 2, 0)), new BlockOccupancy(new Vector3i(2, 2, 1)), new BlockOccupancy(new Vector3i(2, 2, 2)), new BlockOccupancy(new Vector3i(2, 3, 0)), new BlockOccupancy(new Vector3i(2, 3, 1)), new BlockOccupancy(new Vector3i(2, 3, 2)), new BlockOccupancy(new Vector3i(2, 4, 0)), new BlockOccupancy(new Vector3i(2, 4, 1)), new BlockOccupancy(new Vector3i(2, 4, 2)), });
-
-
+            WorldObject.AddOccupancy<NyElectricBlastFurnaceObject>(new List<BlockOccupancy>() 
+            { 
+                new BlockOccupancy(new Vector3i(1, 4, 1), typeof(PipeSlotBlock), new Quaternion(-0.7071071f, 2.634177E-07f, 2.634179E-07f, 0.7071065f), "ChimneyOut"), 
+                new BlockOccupancy(new Vector3i(2, 0, 2), typeof(PipeSlotBlock), new Quaternion(0f, 0f, 0f, 1f), "WaterInputPort"), 
+                new BlockOccupancy(new Vector3i(0, 0, 0), typeof(PipeSlotBlock), new Quaternion(0f, -0.7071068f, 0f, 0.7071068f), "SewageOutputPort"), 
+                new BlockOccupancy(new Vector3i(0, 0, 1)), 
+                new BlockOccupancy(new Vector3i(0, 0, 2)), 
+                new BlockOccupancy(new Vector3i(0, 1, 0)), 
+                new BlockOccupancy(new Vector3i(0, 1, 1)), 
+                new BlockOccupancy(new Vector3i(0, 1, 2)), 
+                new BlockOccupancy(new Vector3i(0, 2, 0)), 
+                new BlockOccupancy(new Vector3i(0, 2, 1)), 
+                new BlockOccupancy(new Vector3i(0, 2, 2)), 
+                new BlockOccupancy(new Vector3i(0, 3, 0)), 
+                new BlockOccupancy(new Vector3i(0, 3, 1)), 
+                new BlockOccupancy(new Vector3i(0, 3, 2)), 
+                new BlockOccupancy(new Vector3i(0, 4, 0)), 
+                new BlockOccupancy(new Vector3i(0, 4, 1)), 
+                new BlockOccupancy(new Vector3i(0, 4, 2)), 
+                new BlockOccupancy(new Vector3i(1, 0, 0)), 
+                new BlockOccupancy(new Vector3i(1, 0, 1)), 
+                new BlockOccupancy(new Vector3i(1, 0, 2)), 
+                new BlockOccupancy(new Vector3i(1, 1, 0)), 
+                new BlockOccupancy(new Vector3i(1, 1, 1)), 
+                new BlockOccupancy(new Vector3i(1, 1, 2)), 
+                new BlockOccupancy(new Vector3i(1, 2, 0)), 
+                new BlockOccupancy(new Vector3i(1, 2, 1)), 
+                new BlockOccupancy(new Vector3i(1, 2, 2)), 
+                new BlockOccupancy(new Vector3i(1, 3, 0)), 
+                new BlockOccupancy(new Vector3i(1, 3, 1)), 
+                new BlockOccupancy(new Vector3i(1, 3, 2)), 
+                new BlockOccupancy(new Vector3i(1, 4, 0)), 
+                new BlockOccupancy(new Vector3i(1, 4, 2)), 
+                new BlockOccupancy(new Vector3i(2, 0, 0)), 
+                new BlockOccupancy(new Vector3i(2, 0, 1)), 
+                new BlockOccupancy(new Vector3i(2, 1, 0)), 
+                new BlockOccupancy(new Vector3i(2, 1, 1)), 
+                new BlockOccupancy(new Vector3i(2, 1, 2)), 
+                new BlockOccupancy(new Vector3i(2, 2, 0)), 
+                new BlockOccupancy(new Vector3i(2, 2, 1)), 
+                new BlockOccupancy(new Vector3i(2, 2, 2)), 
+                new BlockOccupancy(new Vector3i(2, 3, 0)), 
+                new BlockOccupancy(new Vector3i(2, 3, 1)), 
+                new BlockOccupancy(new Vector3i(2, 3, 2)), 
+                new BlockOccupancy(new Vector3i(2, 4, 0)), 
+                new BlockOccupancy(new Vector3i(2, 4, 1)), 
+                new BlockOccupancy(new Vector3i(2, 4, 2)), 
+            });
         }
     }
-
 
     [Serialized]
     [LocDisplayName("Electric Blast Furnace")]
     [Ecopedia("Work Stations", "Craft Tables", createAsSubPage: true, display: InPageTooltip.DynamicTooltip)]
     [LiquidProducer(typeof(SmogItem), 1)]
-    [AllowPluginModules(Tags = new[] { "AdvancedUpgrade", }, ItemTypes = new[] { typeof(AdvancedSmeltingUpgradeItem),
-typeof(SmeltingUpgradeItem), })]
-    public partial class NyElectricBlastFurnaceItem :
-        WorldObjectItem<NyElectricBlastFurnaceObject>
-        , IPersistentData
+    [AllowPluginModules(Tags = new[] { "AdvancedUpgrade", }, ItemTypes = new[] { typeof(AdvancedSmeltingUpgradeItem), typeof(SmeltingUpgradeItem), })]
+    public partial class NyElectricBlastFurnaceItem : WorldObjectItem<NyElectricBlastFurnaceObject>, IPersistentData
     {
         public override LocString DisplayDescription => Localizer.DoStr("A superior replacement for the blast furnace that use electric power.");
 
-        static NyElectricBlastFurnaceItem()
-        {
-
-        }
+        static NyElectricBlastFurnaceItem() { }
 
         [TooltipChildren] public HomeFurnishingValue HousingTooltip => HousingVal;
         [TooltipChildren]
@@ -119,8 +153,7 @@ typeof(SmeltingUpgradeItem), })]
     }
 
     [RequiresSkill(typeof(IndustrySkill), 1)]
-    public class NyElectricBlastFurnaceRecipe :
-        RecipeFamily
+    public class NyElectricBlastFurnaceRecipe : RecipeFamily
     {
         public NyElectricBlastFurnaceRecipe()
         {
@@ -147,8 +180,7 @@ typeof(SmeltingUpgradeItem), })]
     }
 
     [RequiresSkill(typeof(AdvancedSmeltingSkill), 1)]
-    public partial class AdvancedSteelPipeRecipe :
-        RecipeFamily
+    public partial class AdvancedSteelPipeRecipe : RecipeFamily
     {
         public AdvancedSteelPipeRecipe()
         {
@@ -177,8 +209,7 @@ typeof(SmeltingUpgradeItem), })]
     }
 
     [RequiresSkill(typeof(SmeltingSkill), 1)]      
-    public partial class AdvancedCopperBarRecipe :
-        RecipeFamily
+    public partial class AdvancedCopperBarRecipe : RecipeFamily
     {
         public AdvancedCopperBarRecipe()
         {
@@ -208,10 +239,8 @@ typeof(SmeltingUpgradeItem), })]
         }
 	}
 	
-	
 	[RequiresSkill(typeof(SmeltingSkill), 1)]      
-    public partial class AdvancedIronBarRecipe :
-        RecipeFamily
+    public partial class AdvancedIronBarRecipe : RecipeFamily
     {
         public AdvancedIronBarRecipe()
         {
@@ -242,8 +271,7 @@ typeof(SmeltingUpgradeItem), })]
 	}
 	
 	[RequiresSkill(typeof(SmeltingSkill), 1)]      
-    public partial class AdvancedGoldBarRecipe :
-        RecipeFamily
+    public partial class AdvancedGoldBarRecipe : RecipeFamily
     {
         public AdvancedGoldBarRecipe()
         {
@@ -274,8 +302,7 @@ typeof(SmeltingUpgradeItem), })]
 	}
 	
 	[RequiresSkill(typeof(AdvancedSmeltingSkill), 7)]      
-    public partial class AdvancedAdvancedSmeltingUpgradeRecipe :
-        RecipeFamily
+    public partial class AdvancedAdvancedSmeltingUpgradeRecipe : RecipeFamily
     {
         public AdvancedAdvancedSmeltingUpgradeRecipe()
         {
@@ -307,8 +334,7 @@ typeof(SmeltingUpgradeItem), })]
     }
 	
 	[RequiresSkill(typeof(AdvancedSmeltingSkill), 2)]      
-    public partial class AdvancedModernUpgradeLvl1Recipe :
-        RecipeFamily
+    public partial class AdvancedModernUpgradeLvl1Recipe : RecipeFamily
     {
         public AdvancedModernUpgradeLvl1Recipe()
         {
@@ -341,8 +367,7 @@ typeof(SmeltingUpgradeItem), })]
     }
 	
 	[RequiresSkill(typeof(AdvancedSmeltingSkill), 1)]      
-    public partial class AdvancedQuicklimeRecipe :
-        RecipeFamily
+    public partial class AdvancedQuicklimeRecipe : RecipeFamily
     {
         public AdvancedQuicklimeRecipe()
         {
@@ -374,8 +399,7 @@ typeof(SmeltingUpgradeItem), })]
 	}
 	
 	[RequiresSkill(typeof(AdvancedSmeltingSkill), 1)]      
-    public partial class AdvancedRebarRecipe :
-        RecipeFamily
+    public partial class AdvancedRebarRecipe : RecipeFamily
     {
         public AdvancedRebarRecipe()
         {
@@ -407,8 +431,7 @@ typeof(SmeltingUpgradeItem), })]
 	}
 	
 	[RequiresSkill(typeof(AdvancedSmeltingSkill), 1)]      
-    public partial class AdvancedRivetRecipe :
-        RecipeFamily
+    public partial class AdvancedRivetRecipe : RecipeFamily
     {
         public AdvancedRivetRecipe()
         {
@@ -440,8 +463,7 @@ typeof(SmeltingUpgradeItem), })]
 	}
 	
 	[RequiresSkill(typeof(AdvancedSmeltingSkill), 1)]      
-    public partial class AdvancedSteelBarRecipe :
-        RecipeFamily
+    public partial class AdvancedSteelBarRecipe : RecipeFamily
     {
         public AdvancedSteelBarRecipe()
         {
