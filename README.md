@@ -26,15 +26,15 @@ To Download the Files Click Code, Download Zip, Then Find the Folder you would l
 
 # Available Mods 
 
-[**NyElectrics**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/NyElectrics) - Eco Version: 9.4.3 - Open Source Version [Here](https://github.com/tedoxdev/NyElectrics)
+[**NyElectrics**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/NyElectrics) - Eco Version: 9.4.5 - Open Source Version [Here](https://github.com/tedoxdev/NyElectrics)
 
-[**Seed Barrel**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/SeedBarrel) - Eco Version 9.4.3
+[**Seed Barrel**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/SeedBarrel) - Eco Version 9.4.5
 
-[**Conveyor Belts**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/ConveyorBelts) - Eco Version 9.4.3 - Open Source Version [Here](https://github.com/Elec0/eco-mods/tree/main/ConveyorBeltUpdate)
+[**Conveyor Belts**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/ConveyorBelts) - Eco Version 9.4.5 - Open Source Version [Here](https://github.com/Elec0/eco-mods/tree/main/ConveyorBeltUpdate)
 
-[**Lucky Pickaxe**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/LuckPickaxe) - Eco Version: 9.4.3
+[**Lucky Pickaxe**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/LuckPickaxe) - Eco Version: 9.4.5
 
-[**Modern Solar Panels**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/ModernSolarPanels) - Eco Version: 9.4.3
+[**Modern Solar Panels**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/ModernSolarPanels) - Eco Version: 9.4.5
 
 # Wanna See a mod on here?
 
