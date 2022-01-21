@@ -16,49 +16,76 @@ using static Eco.Gameplay.Housing.PropertyValues.HomeFurnishingValue;
 
 namespace Eco.Mods.TechTree
 {
-		[Serialized]
-	[LocDisplayName("Paper Dog")]
-	[Ecopedia("Housing Objects", "Decoration", true, display: InPageTooltip.DynamicTooltip)]
-	[Tag("Housing", 1)]
-	[Weight(250)]
-	public class PaperDogItem : WorldObjectItem<PaperDogObject>
-	{
-						public override LocString DisplayDescription
-		{
-			get
-			{
-				return Localizer.DoStr("A black dog.");
-			}
-		}
+    [Serialized]
+    [LocDisplayName("Paper Dog")]
+    [Ecopedia("Housing Objects", "Decoration", true, display: InPageTooltip.DynamicTooltip)]
+    [Tag("Housing", 1)]
+    [Weight(250)]
+    public class PaperDogItem : WorldObjectItem<PaperDogObject>
+    {
+        public override LocString DisplayDescription => Localizer.DoStr("A black dog.");
 
-						[TooltipChildren(new Type[]
-		{
+        [TooltipChildren]
+        public HomeFurnishingValue HousingTooltip => HousingVal;
 
-		})]
-		public HomeFurnishingValue HousingTooltip
-		{
-			get
-			{
-				return PaperDogItem.HousingVal;
-			}
-		}
+        [TooltipChildren]
+        public static HomeFurnishingValue HousingVal => new()
+        {
+            Category = 0,
+            SkillValue = 1.5f,
+            TypeForRoomLimit = Localizer.DoStr("Decoration"),
+            DiminishingReturnPercent = 0.2f
+        };
+    }
 
-						[TooltipChildren(new Type[]
-		{
+    [Serialized]
+    [RequireComponent(typeof(PropertyAuthComponent), null)]
+    [RequireComponent(typeof(HousingComponent), null)]
+    [RequireComponent(typeof(SolidGroundComponent), null)]
+    public class PaperDogObject : WorldObject, IRepresentsItem
+    {
+        public override LocString DisplayName => Localizer.DoStr("Paper Dog");
 
-		})]
-		public static HomeFurnishingValue HousingVal
-		{
-			get
-			{
-				return new HomeFurnishingValue
-				{
-					Category = 0,
-					SkillValue = 1.5f,
-					TypeForRoomLimit = Localizer.DoStr("Decoration"),
-					DiminishingReturnPercent = 0.2f
-				};
-			}
-		}
-	}
+        public override TableTextureMode TableTexture => TableTextureMode.Paper;
+
+        public virtual Type RepresentedItemType => typeof(PaperDogItem);
+
+        protected override void Initialize()
+        {
+            base.GetComponent<HousingComponent>(null).HomeValue = PaperDogItem.HousingVal;
+        }
+
+        public override void Destroy()
+        {
+            base.Destroy();
+        }
+    }
+
+    [RequiresSkill(typeof(PaperMillingSkill), 4)]
+    public class PaperDogRecipe : RecipeFamily
+    {
+        public PaperDogRecipe()
+        {
+            Recipe item = new Recipe("Paper Dog", Localizer.DoStr("Paper Dog"), new IngredientElement[]
+            {
+                new IngredientElement(typeof(ColouredPaperBlackItem), 10f, typeof(PaperMillingSkill), typeof(PaperMillingLavishResourcesTalent))
+            }, new CraftingElement[]
+            {
+                new CraftingElement<PaperDogItem>(1f)
+            });
+            base.Recipes = new List<Recipe>
+            {
+                item
+            };
+            this.ExperienceOnCraft = 2f;
+            base.LaborInCalories = RecipeFamily.CreateLaborInCaloriesValue(40f, typeof(PaperMillingSkill));
+            base.CraftMinutes = RecipeFamily.CreateCraftTimeValue(typeof(PaperDogRecipe), 3f, typeof(PaperMillingSkill), new Type[]
+            {
+                typeof(PaperMillingFocusedSpeedTalent),
+                typeof(PaperMillingParallelSpeedTalent)
+            });
+            base.Initialize(Localizer.DoStr("Paper Dog"), typeof(PaperDogRecipe));
+            CraftingComponent.AddRecipe(typeof(PaperMillingWorkBenchObject), this);
+        }
+    }
 }
