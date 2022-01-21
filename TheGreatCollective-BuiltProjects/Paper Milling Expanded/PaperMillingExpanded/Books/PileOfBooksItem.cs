@@ -81,7 +81,7 @@ namespace Eco.Mods.TechTree
             },
             ProductList = new()
             {
-                new EMCraftable("REPLACEME"),
+                new EMCraftable("PileOfBooksItem"),
             },
             BaseExperienceOnCraft = 2,
             BaseLabor = 60,
