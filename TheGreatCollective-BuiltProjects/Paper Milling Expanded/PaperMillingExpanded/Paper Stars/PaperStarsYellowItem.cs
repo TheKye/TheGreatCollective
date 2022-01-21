@@ -40,8 +40,8 @@ namespace Eco.Mods.TechTree
     }
 
     [Serialized]
-    [RequireComponent(typeof(PropertyAuthComponent), null)]
-    [RequireComponent(typeof(HousingComponent), null)]
+    [RequireComponent(typeof(PropertyAuthComponent))]
+    [RequireComponent(typeof(HousingComponent))]
     public class PaperStarsYellowObject : WorldObject, IRepresentsItem
     {
         public override LocString DisplayName => Localizer.DoStr("Paper Stars Yellow");

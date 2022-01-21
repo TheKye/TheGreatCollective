@@ -24,9 +24,9 @@ namespace Eco.Mods.TechTree
     }
 
     [Serialized]
-    [RequireComponent(typeof(PropertyAuthComponent), null)]
-    [RequireComponent(typeof(LinkComponent), null)]
-    [RequireComponent(typeof(PublicStorageComponent), null)]
+    [RequireComponent(typeof(PropertyAuthComponent))]
+    [RequireComponent(typeof(LinkComponent))]
+    [RequireComponent(typeof(PublicStorageComponent))]
     public class CardboardBoxObject : WorldObject, IRepresentsItem
     {
         public override LocString DisplayName => Localizer.DoStr("Cardboard Box");

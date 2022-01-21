@@ -38,11 +38,11 @@ namespace Eco.Mods.TechTree
     }
 
     [Serialized]
-    [RequireComponent(typeof(PropertyAuthComponent), null)]
-    [RequireComponent(typeof(LinkComponent), null)]
-    [RequireComponent(typeof(HousingComponent), null)]
-    [RequireComponent(typeof(PublicStorageComponent), null)]
-    [RequireComponent(typeof(SolidGroundComponent), null)]
+    [RequireComponent(typeof(PropertyAuthComponent))]
+    [RequireComponent(typeof(LinkComponent))]
+    [RequireComponent(typeof(HousingComponent))]
+    [RequireComponent(typeof(PublicStorageComponent))]
+    [RequireComponent(typeof(SolidGroundComponent))]
     public class PaperBookshelfObject : WorldObject, IRepresentsItem
     {
         public override LocString DisplayName => Localizer.DoStr("Paper Bookshelf");

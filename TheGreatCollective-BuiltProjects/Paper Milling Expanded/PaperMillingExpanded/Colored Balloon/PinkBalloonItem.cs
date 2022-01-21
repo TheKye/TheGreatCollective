@@ -38,9 +38,9 @@ namespace Eco.Mods.TechTree
     }
 
     [Serialized]
-    [RequireComponent(typeof(PropertyAuthComponent), null)]
-    [RequireComponent(typeof(HousingComponent), null)]
-    [RequireComponent(typeof(SolidGroundComponent), null)]
+    [RequireComponent(typeof(PropertyAuthComponent))]
+    [RequireComponent(typeof(HousingComponent))]
+    [RequireComponent(typeof(SolidGroundComponent))]
     public class PinkBalloonObject : WorldObject, IRepresentsItem
     {
         public override LocString DisplayName => Localizer.DoStr("Pink Balloon");

@@ -16,50 +16,67 @@ using static Eco.Gameplay.Housing.PropertyValues.HomeFurnishingValue;
 
 namespace Eco.Mods.TechTree
 {
-		[Serialized]
-	[LocDisplayName("Paper Heart Broken Black")]
-	[Ecopedia("Housing Objects", "Decoration", true, display: InPageTooltip.DynamicTooltip)]
-	[Tag("Housing", 1)]
-	[Weight(50)]
-	[Tag("PaperHeartBroken", 1)]
-	public class PaperHeartBrokenBlackItem : WorldObjectItem<PaperHeartBrokenBlackObject>
-	{
-						public override LocString DisplayDescription
-		{
-			get
-			{
-				return Localizer.DoStr("You'll get through this.");
-			}
-		}
+    [Serialized]
+    [LocDisplayName("Paper Heart Broken Black")]
+    [Ecopedia("Housing Objects", "Decoration", true, display: InPageTooltip.DynamicTooltip)]
+    [Tag("Housing", 1)]
+    [Weight(50)]
+    [Tag("PaperHeartBroken", 1)]
+    public class PaperHeartBrokenBlackItem : WorldObjectItem<PaperHeartBrokenBlackObject>
+    {
+        public override LocString DisplayDescription => Localizer.DoStr("You'll get through this.");
 
-						[TooltipChildren(new Type[]
-		{
+        [TooltipChildren]
+        public HomeFurnishingValue HousingTooltip => HousingVal;
 
-		})]
-		public HomeFurnishingValue HousingTooltip
-		{
-			get
-			{
-				return PaperHeartBrokenBlackItem.HousingVal;
-			}
-		}
+        [TooltipChildren]
+        public static HomeFurnishingValue HousingVal => new()
+        {
+            Category = 0,
+            SkillValue = 0.5f,
+            TypeForRoomLimit = Localizer.DoStr("Decoration"),
+            DiminishingReturnPercent = 0.2f
+        };
+    }
 
-						[TooltipChildren(new Type[]
-		{
+    [Serialized]
+    [RequireComponent(typeof(PropertyAuthComponent))]
+    [RequireComponent(typeof(HousingComponent))]
+    public class PaperHeartBrokenBlackObject : WorldObject, IRepresentsItem
+    {
+        public override LocString DisplayName => Localizer.DoStr("Paper Heart Broken Black");
 
-		})]
-		public static HomeFurnishingValue HousingVal
-		{
-			get
-			{
-				return new HomeFurnishingValue
-				{
-					Category = 0,
-					SkillValue = 0.5f,
-					TypeForRoomLimit = Localizer.DoStr("Decoration"),
-					DiminishingReturnPercent = 0.2f
-				};
-			}
-		}
-	}
+        public override TableTextureMode TableTexture => TableTextureMode.Paper;
+
+        public virtual Type RepresentedItemType => typeof(PaperHeartBrokenBlackItem);
+
+        protected override void Initialize()
+        {
+            base.GetComponent<HousingComponent>(null).HomeValue = PaperHeartBrokenBlackItem.HousingVal;
+        }
+
+        public override void Destroy()
+        {
+            base.Destroy();
+        }
+    }
+
+    [RequiresSkill(typeof(PaperMillingSkill), 4)]
+    public class PaperHeartBrokenBlackRecipe : Recipe
+    {
+        public PaperHeartBrokenBlackRecipe()
+        {
+            base.Name = "PaperHeartBrokenBlack";
+            base.DisplayName = Localizer.DoStr("Paper Heart Broken Black");
+            base.Ingredients = new List<IngredientElement>
+            {
+                new IngredientElement(typeof(ColouredPaperBlackItem), 6f, typeof(PaperMillingSkill), typeof(PaperMillingLavishResourcesTalent))
+            };
+            base.Items = new List<CraftingElement>
+            {
+                new CraftingElement<PaperHeartBrokenBlackItem>(1f)
+            };
+            CraftingComponent.AddTagProduct(typeof(PaperMillingWorkBenchObject), typeof(PaperHeartBrokenRedRecipe), this);
+        }
+    }
 }
