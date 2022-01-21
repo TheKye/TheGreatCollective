@@ -13,6 +13,7 @@ using Eco.Shared.Items;
 using Eco.Shared.Localization;
 using Eco.Shared.Serialization;
 using Eco.EM.Artistry;
+using Eco.EM.Framework.Resolvers;
 
 namespace Eco.Mods.TechTree
 {
@@ -62,34 +63,48 @@ namespace Eco.Mods.TechTree
     }
 
     [RequiresSkill(typeof(PaperMillingSkill), 5)]
-    public class PileOfBooksRecipe : RecipeFamily
+    public class PileOfBooksRecipe : RecipeFamily, IConfigurableRecipe
     {
+        static RecipeDefaultModel Defaults => new()
+        {
+            ModelType = typeof(PileOfBooksRecipe).Name,
+            Assembly = typeof(PileOfBooksRecipe).AssemblyQualifiedName,
+            HiddenName = "Pile of Books",
+            LocalizableName = Localizer.DoStr("Pile of Books"),
+            IngredientList = new()
+            {
+                new EMIngredient("RedDyeItem", false, 1f),
+                new EMIngredient("BlueDyeItem", false, 1f),
+                new EMIngredient("GreenDyeItem", false, 1f),
+                new EMIngredient("YellowDyeItem", false, 2f),
+                new EMIngredient("PaperItem", false, 60f)
+            },
+            ProductList = new()
+            {
+                new EMCraftable("REPLACEME"),
+            },
+            BaseExperienceOnCraft = 2,
+            BaseLabor = 60,
+            LaborIsStatic = false,
+            BaseCraftTime = 6,
+            CraftTimeIsStatic = false,
+            CraftingStation = "PaperMillingWorkBenchItem",
+            RequiredSkillType = typeof(PaperMillingSkill),
+            RequiredSkillLevel = 5,
+            IngredientImprovementTalents = typeof(PaperMillingLavishResourcesTalent),
+            SpeedImprovementTalents = new Type[] { typeof(PaperMillingFocusedSpeedTalent), typeof(PaperMillingParallelSpeedTalent) },
+        };
+
+        static PileOfBooksRecipe() { EMRecipeResolver.AddDefaults(Defaults); }
+
         public PileOfBooksRecipe()
         {
-            Recipe item = new Recipe("PileOfBooks", Localizer.DoStr("Pile Of Books"), new IngredientElement[]
-            {
-                new IngredientElement(typeof(RedDyeItem), 1f, typeof(PaperMillingSkill), typeof(PaperMillingLavishResourcesTalent)),
-                new IngredientElement(typeof(BlueDyeItem), 1f, typeof(PaperMillingSkill), typeof(PaperMillingLavishResourcesTalent)),
-                new IngredientElement(typeof(GreenDyeItem), 1f, typeof(PaperMillingSkill), typeof(PaperMillingLavishResourcesTalent)),
-                new IngredientElement(typeof(YellowDyeItem), 2f, typeof(PaperMillingSkill), typeof(PaperMillingLavishResourcesTalent)),
-                new IngredientElement(typeof(PaperItem), 60f, typeof(PaperMillingSkill), typeof(PaperMillingLavishResourcesTalent))
-            }, new CraftingElement[]
-            {
-                new CraftingElement<PileOfBooksItem>(1f)
-            });
-            base.Recipes = new List<Recipe>
-            {
-                item
-            };
-            this.ExperienceOnCraft = 2f;
-            base.LaborInCalories = CreateLaborInCaloriesValue(60f, typeof(PaperMillingSkill));
-            base.CraftMinutes = CreateCraftTimeValue(typeof(PileOfBooksRecipe), 6f, typeof(PaperMillingSkill), new Type[]
-            {
-                typeof(PaperMillingFocusedSpeedTalent),
-                typeof(PaperMillingParallelSpeedTalent)
-            });
-            base.Initialize(Localizer.DoStr("Pile Of Books"), typeof(PileOfBooksRecipe));
-            CraftingComponent.AddRecipe(typeof(PaperMillingWorkBenchObject), this);
+            this.Recipes = EMRecipeResolver.Obj.ResolveRecipe(this);
+            this.LaborInCalories = EMRecipeResolver.Obj.ResolveLabor(this);
+            this.CraftMinutes = EMRecipeResolver.Obj.ResolveCraftMinutes(this);
+            this.ExperienceOnCraft = EMRecipeResolver.Obj.ResolveExperience(this);
+            this.Initialize(Defaults.LocalizableName, GetType());
+            CraftingComponent.AddRecipe(EMRecipeResolver.Obj.ResolveStation(this), this);
         }
     }
 }
