@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheGreatCollective", "TheGreatCollective\TheGreatCollective.csproj", "{C5811CC8-0CCA-4616-A394-5F00F1EA4650}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheGreatCollective", "TheGreatCollective\TheGreatCollective.csproj", "{C5811CC8-0CCA-4616-A394-5F00F1EA4650}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaperMillingExpanded", "TheGreatCollective-BuiltProjects\Paper Milling Expanded\PaperMillingExpanded.csproj", "{82D53837-3F85-4CAC-A2E4-D081DEEFD55B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build Projects", "Build Projects", "{5A14DE0C-6E34-4ECE-847F-FDD9E25F2684}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{C5811CC8-0CCA-4616-A394-5F00F1EA4650}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5811CC8-0CCA-4616-A394-5F00F1EA4650}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5811CC8-0CCA-4616-A394-5F00F1EA4650}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82D53837-3F85-4CAC-A2E4-D081DEEFD55B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82D53837-3F85-4CAC-A2E4-D081DEEFD55B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82D53837-3F85-4CAC-A2E4-D081DEEFD55B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82D53837-3F85-4CAC-A2E4-D081DEEFD55B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{82D53837-3F85-4CAC-A2E4-D081DEEFD55B} = {5A14DE0C-6E34-4ECE-847F-FDD9E25F2684}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D7234C5A-F860-4C59-8555-3FE92C3CEF05}
