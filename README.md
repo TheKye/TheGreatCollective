@@ -38,9 +38,9 @@ To Download the Files Click Code, Download Zip, Then Find the Folder you would l
 
 # Available Mods - as DLL Files
 
-**Paper Milling Expanded** - Eco Version: 9.4.5
+[**Paper Milling Expanded**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective-BuiltProjects/Paper%20Milling%20Expanded) - Eco Version: 9.4.5
 
-**Dynamite Mod** - Eco Version 9.4.5
+[**Dynamite Mod**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective-BuiltProjects/Dynamite) - Eco Version 9.4.5
 
 # Wanna See a mod on here?
 
