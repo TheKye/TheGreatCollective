@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaperMillingExpanded", "The
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build Projects", "Build Projects", "{5A14DE0C-6E34-4ECE-847F-FDD9E25F2684}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dynamite", "TheGreatCollective-BuiltProjects\Dynamite\Dynamite.csproj", "{2320818D-399D-4090-82C5-81BE357F24EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +25,17 @@ Global
 		{82D53837-3F85-4CAC-A2E4-D081DEEFD55B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82D53837-3F85-4CAC-A2E4-D081DEEFD55B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82D53837-3F85-4CAC-A2E4-D081DEEFD55B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2320818D-399D-4090-82C5-81BE357F24EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2320818D-399D-4090-82C5-81BE357F24EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2320818D-399D-4090-82C5-81BE357F24EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2320818D-399D-4090-82C5-81BE357F24EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{82D53837-3F85-4CAC-A2E4-D081DEEFD55B} = {5A14DE0C-6E34-4ECE-847F-FDD9E25F2684}
+		{2320818D-399D-4090-82C5-81BE357F24EF} = {5A14DE0C-6E34-4ECE-847F-FDD9E25F2684}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D7234C5A-F860-4C59-8555-3FE92C3CEF05}
