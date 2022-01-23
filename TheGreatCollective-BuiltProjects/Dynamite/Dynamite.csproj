@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Assets\**" />
+    <EmbeddedResource Remove="Assets\**" />
+    <None Remove="Assets\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Eco.ActorsFramework">
       <HintPath>..\..\Dependencies\Eco.ActorsFramework.dll</HintPath>
     </Reference>
