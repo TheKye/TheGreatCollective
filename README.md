@@ -24,7 +24,7 @@ Credits Section will Contain a list of all who have worked on that mod as well a
 
 To Download the Files Click Code, Download Zip, Then Find the Folder you would like for the mod you want and add it to the UserCode folder in your server and done!
 
-# Available Mods 
+# Available Mods - As CS Files
 
 [**NyElectrics**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/NyElectrics) - Eco Version: 9.4.5 - Open Source Version [Here](https://github.com/tedoxdev/NyElectrics)
 
@@ -35,6 +35,12 @@ To Download the Files Click Code, Download Zip, Then Find the Folder you would l
 [**Lucky Pickaxe**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/LuckPickaxe) - Eco Version: 9.4.5
 
 [**Modern Solar Panels**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/ModernSolarPanels) - Eco Version: 9.4.5
+
+# Available Mods - as DLL Files
+
+**Paper Milling Expanded** - Eco Version: 9.4.5
+
+**Dynamite Mod** - Eco Version 9.4.5
 
 # Wanna See a mod on here?
 
@@ -57,6 +63,10 @@ Lucky Pickaxe - SirA.Lmao
 
 Modern Solarpanels - SnowHells
 
+Paper Milling Expanded - M3OWZ
+
+Dynamite Mod - Ondulas
+
 ## Contributors
 NyElectrics 
 - Abrasivehorizon
@@ -65,3 +75,9 @@ Conveyor Belts
 - Elec0
 - Keishee
 - Xanhou
+
+Paper Milling Expanded
+- The Duke Of Rockford
+
+Dynamite Mod
+- The Duke Of Rockford
