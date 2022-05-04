@@ -40,7 +40,7 @@ namespace Eco.Mods.TechTree
             {
                 StringBuilder stringBuilder = new();
                 stringBuilder.Append(Localizer.DoStr("Already actived !"));
-                ChatManager.ServerMessageToPlayer(new LocString(stringBuilder.ToString()), context.Player.User, (Shared.Services.DefaultChatTags)2, (Shared.Services.MessageCategory)8, false);
+                context.Player.ErrorLocStr(stringBuilder.ToString());
                 result = InteractResult.Success;
             }
             return result;

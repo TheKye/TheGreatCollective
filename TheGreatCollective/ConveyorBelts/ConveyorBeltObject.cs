@@ -13,6 +13,7 @@ namespace Eco.Mods.TechTree
     using Eco.Shared.Serialization;
     using Eco.Shared.Utils;
     using Eco.Shared.Networking;
+    using Eco.Gameplay.Systems.Messaging.Chat.Commands;
 
     [Serialized]
     [RequireComponent(typeof(PropertyAuthComponent))]

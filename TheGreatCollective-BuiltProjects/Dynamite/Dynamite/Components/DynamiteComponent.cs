@@ -14,6 +14,8 @@ using Eco.Shared.Math;
 using Eco.Shared.Serialization;
 using Eco.Simulation.Time;
 using Eco.World.Blocks;
+using Eco.Gameplay.Systems.Messaging.Chat;
+using Eco.Shared.Voxel;
 
 namespace Eco.Gameplay.Components
 {
@@ -81,7 +83,7 @@ namespace Eco.Gameplay.Components
                     bool flag = ((float)num2 >= num - 1f && this.rnd.Next(2) > 0) || (float)num2 < num - 1f;
                     if (flag)
                     {
-                        bool flag2 = num2 != 0 && !block.Is<PolluteGround>() && !block.Is<Impenetrable>() && !block.Is<UnderWater>() && ServiceHolder<IAuthManager>.Obj.IsAuthorized(vector3i, this.user, Shared.Items.AccessType.FullAccess);
+                        bool flag2 = num2 != 0 && !block.Is<PolluteGround>() && !block.Is<Impenetrable>() && !block.Is<UnderWater>() && ServiceHolder<IAuthManager>.Obj.IsAuthorized(PlotUtil.RawPlotPos(vector3i.XZ), this.user, Shared.Items.AccessType.FullAccess);
                         if (flag2)
                         {
                             this.rubble = this.rnd.Next(min, max);
@@ -108,7 +110,7 @@ namespace Eco.Gameplay.Components
                         }
                         block = World.World.GetBlock((Vector3i)x + Vector3i.Down * num2);
                         vector3i = (Vector3i)x + Vector3i.Down * num2;
-                        bool flag6 = !block.Is<PolluteGround>() && !block.Is<Impenetrable>() && !block.Is<UnderWater>() && ServiceHolder<IAuthManager>.Obj.IsAuthorized(vector3i, this.user, Shared.Items.AccessType.FullAccess);
+                        bool flag6 = !block.Is<PolluteGround>() && !block.Is<Impenetrable>() && !block.Is<UnderWater>() && ServiceHolder<IAuthManager>.Obj.IsAuthorized(PlotUtil.RawPlotPos(vector3i.XZ), this.user, Shared.Items.AccessType.FullAccess);
                         if (flag6)
                         {
                             this.rubble2 = this.rnd.Next(min, max);
@@ -148,7 +150,7 @@ namespace Eco.Gameplay.Components
             this.Interaction = WorldTime.Seconds;
             StringBuilder stringBuilder = new();
             stringBuilder.Append(Localizer.DoStr("The dynamite will blow up in 3 seconds... Goodbye !"));
-            ChatManager.ServerMessageToPlayer(new LocString(stringBuilder.ToString()), this.user);
+            context.Player.MsgLocStr(stringBuilder.ToString());
             return InteractResult.Success;
         }
 

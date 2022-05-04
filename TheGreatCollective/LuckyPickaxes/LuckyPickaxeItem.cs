@@ -32,7 +32,7 @@ namespace Eco.Mods.TechTree
     [Category("Hidden"), Tag("Excavation")]
     public partial class LuckyPickaxeItem : ToolItem
     {
-        private static readonly SkillModifiedValue caloriesBurn = CreateCalorieValue(20, typeof(MiningSkill), typeof(LuckyPickaxeItem), new LuckyPickaxeItem().UILink());
+        private static readonly SkillModifiedValue caloriesBurn = CreateCalorieValue(20, typeof(MiningSkill), typeof(LuckyPickaxeItem));
         static LuckyPickaxeItem() { }
 
         public override IDynamicValue CaloriesBurn                  => caloriesBurn;

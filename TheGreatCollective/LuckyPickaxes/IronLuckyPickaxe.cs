@@ -67,7 +67,7 @@ namespace Eco.Mods.TechTree
     public partial class IronLuckyPickaxeItem : LuckyPickaxeItem
     {
         // Static values
-        private static IDynamicValue caloriesBurn = new MultiDynamicValue(MultiDynamicOps.Multiply, new TalentModifiedValue(typeof(IronLuckyPickaxeItem), typeof(MiningToolEfficiencyTalent)), CreateCalorieValue(17, typeof(MiningSkill), typeof(IronLuckyPickaxeItem), new IronLuckyPickaxeItem().UILink()));
+        private static IDynamicValue caloriesBurn = new MultiDynamicValue(MultiDynamicOps.Multiply, new TalentModifiedValue(typeof(IronLuckyPickaxeItem), typeof(MiningToolEfficiencyTalent)), CreateCalorieValue(17, typeof(MiningSkill), typeof(IronLuckyPickaxeItem)));
         private static IDynamicValue exp = new ConstantValue(0.1f);
         private static IDynamicValue tier = new MultiDynamicValue(MultiDynamicOps.Sum, new ConstantValue(2), new TalentModifiedValue(typeof(IronLuckyPickaxeItem), typeof(MiningToolStrengthTalent), 0));
         private static SkillModifiedValue skilledRepairCost = new SkillModifiedValue(4, SmeltingSkill.MultiplicativeStrategy, typeof(SmeltingSkill), Localizer.DoStr("repair cost"), DynamicValueType.Efficiency); 
