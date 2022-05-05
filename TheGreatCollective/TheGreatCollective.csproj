@@ -12,9 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Eco.ActorsFramework">
-      <HintPath>..\Dependencies\Eco.ActorsFramework.dll</HintPath>
-    </Reference>
     <Reference Include="Eco.Core">
       <HintPath>..\Dependencies\Eco.Core.dll</HintPath>
     </Reference>
@@ -41,9 +38,6 @@
     </Reference>
     <Reference Include="Eco.Stats">
       <HintPath>..\Dependencies\Eco.Stats.dll</HintPath>
-    </Reference>
-    <Reference Include="Eco.Tests">
-      <HintPath>..\Dependencies\Eco.Tests.dll</HintPath>
     </Reference>
     <Reference Include="Eco.WebServer">
       <HintPath>..\Dependencies\Eco.WebServer.dll</HintPath>
