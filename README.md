@@ -36,15 +36,16 @@ To Download the Files Click Code, Download Zip, Then Find the Folder you would l
 
 [**Modern Solar Panels**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/ModernSolarPanels) - Eco Version: 9.5
 
+[**Wooden Bracers**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/WoodenBracers) - Eco Version 9.5
+
+[**Wire Fences**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/WireFences) - Eco Version 9.5
+
 # Available Mods - as DLL Files
 
 [**Paper Milling Expanded**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective-BuiltProjects/Paper%20Milling%20Expanded) - Eco Version: 9.5
 
 [**Dynamite Mod**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective-BuiltProjects/Dynamite) - Eco Version 9.5
 
-[**Wooden Bracers**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/WoodenBracers) - Eco Version 9.5
-
-[**Wire Fences**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/WireFences) - Eco Version 9.5
 
 # Wanna See a mod on here?
 
