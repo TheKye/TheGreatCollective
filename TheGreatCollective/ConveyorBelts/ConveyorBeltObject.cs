@@ -14,6 +14,8 @@ namespace Eco.Mods.TechTree
     using Eco.Shared.Utils;
     using Eco.Shared.Networking;
     using Eco.Gameplay.Systems.Messaging.Chat.Commands;
+    using Vector3 = System.Numerics.Vector3;
+    using System.ComponentModel;
 
     [Serialized]
     [RequireComponent(typeof(PropertyAuthComponent))]
@@ -22,8 +24,9 @@ namespace Eco.Mods.TechTree
     [RequireComponent(typeof(WorldStockpileComponent))]
     [RequireComponent(typeof(LinkComponent))]
     [RequireComponent(typeof(StorageComponent))]
-    [RequireComponent(typeof(SolidGroundComponent))]
-    public partial class ConveyorBeltObject : WorldObject, IChatCommandHandler
+    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
+    [ChatCommandHandler]
+    public partial class ConveyorBeltObject : WorldObject
     {
         public static readonly Vector3i DefaultDim = new(1, 1, 1);
         public override LocString DisplayName => Localizer.DoStr("Conveyor Belt");
@@ -48,13 +51,13 @@ namespace Eco.Mods.TechTree
             base.Initialize();
             Vector3 rot = this.Rotation.Right;
 
-            if (rot.x == 1)
+            if (rot.X == 1)
                 _orientation = Orientation.NORTH;
-            else if (rot.z < -0.9 && rot.z > -1.1)
+            else if (rot.Z < -0.9 && rot.Z > -1.1)
                 _orientation = Orientation.EAST;
-            else if (rot.x == -1)
+            else if (rot.X == -1)
                 _orientation = Orientation.SOUTH;
-            else if (rot.z > 0.9 && rot.z < 1.1)
+            else if (rot.Z > 0.9 && rot.Z < 1.1)
                 _orientation = Orientation.WEST;
 
 

@@ -260,7 +260,7 @@ namespace Eco.Mods.TechTree
     [RequireComponent(typeof(MinimapComponent))]
     [RequireComponent(typeof(LinkComponent))]
     [RequireComponent(typeof(CraftingComponent))]
-    [RequireComponent(typeof(SolidGroundComponent))]
+    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
     [RequireComponent(typeof(PluginModulesComponent))]
     [RequireComponent(typeof(RoomRequirementsComponent))]
     public partial class dSawhorseWorkbenchObject : WorldObject, IRepresentsItem
