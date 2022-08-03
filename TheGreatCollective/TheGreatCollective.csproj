@@ -5,10 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ConveyorBelts\" />
-    <Folder Include="LuckPickaxe\" />
-    <Folder Include="SeedBarrel\" />
-    <Folder Include="NyElectrics\" />
+    <Compile Remove="LuckPickaxe\**" />
+    <EmbeddedResource Remove="LuckPickaxe\**" />
+    <None Remove="LuckPickaxe\**" />
   </ItemGroup>
 
   <ItemGroup>

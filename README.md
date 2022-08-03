@@ -40,6 +40,8 @@ To Download the Files Click Code, Download Zip, Then Find the Folder you would l
 
 [**Wire Fences**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/WireFences) - Eco Version 9.5
 
+[**Steam Front Loader**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/SteamFrontLoader) - Eco Version 9.5
+
 # Available Mods - as DLL Files
 
 [**Paper Milling Expanded**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective-BuiltProjects/Paper%20Milling%20Expanded) - Eco Version: 9.5
@@ -75,6 +77,8 @@ Dynamite Mod - Ondulas
 Wooden Bracers - DemonDog
 
 Wire Fences - Demon Dog
+
+Steam Front Loader - M3OWZ
 
 ## Contributors
 NyElectrics 
