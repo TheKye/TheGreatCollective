@@ -11,12 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ConveyorBelts\" />
-    <Folder Include="SeedBarrel\" />
-    <Folder Include="NyElectrics\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="Eco.Core">
       <HintPath>..\Dependencies\Eco.Core.dll</HintPath>
     </Reference>
