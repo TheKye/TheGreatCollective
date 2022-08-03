@@ -26,21 +26,26 @@ To Download the Files Click Code, Download Zip, Then Find the Folder you would l
 
 # Available Mods - As CS Files
 
-[**NyElectrics**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/NyElectrics) - Eco Version: 9.4.5 - Open Source Version [Here](https://github.com/tedoxdev/NyElectrics)
+[**NyElectrics**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/NyElectrics) - Eco Version: 9.5 - Open Source Version [Here](https://github.com/tedoxdev/NyElectrics)
 
-[**Seed Barrel**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/SeedBarrel) - Eco Version 9.4.5
+[**Seed Barrel**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/SeedBarrel) - Eco Version 9.5
 
-[**Conveyor Belts**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/ConveyorBelts) - Eco Version 9.4.5 - Open Source Version [Here](https://github.com/Elec0/eco-mods/tree/main/ConveyorBeltUpdate)
+[**Conveyor Belts**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/ConveyorBelts) - Eco Version 9.5 - Open Source Version [Here](https://github.com/Elec0/eco-mods/tree/main/ConveyorBeltUpdate)
 
-[**Lucky Pickaxe**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/LuckPickaxe) - Eco Version: 9.4.5
+[**Lucky Pickaxe**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/LuckPickaxe) - Eco Version: 9.5
 
-[**Modern Solar Panels**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/ModernSolarPanels) - Eco Version: 9.4.5
+[**Modern Solar Panels**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/ModernSolarPanels) - Eco Version: 9.5
+
+[**Wooden Bracers**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/WoodenBracers) - Eco Version 9.5
+
+[**Wire Fences**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/WireFences) - Eco Version 9.5
 
 # Available Mods - as DLL Files
 
-[**Paper Milling Expanded**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective-BuiltProjects/Paper%20Milling%20Expanded) - Eco Version: 9.4.5
+[**Paper Milling Expanded**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective-BuiltProjects/Paper%20Milling%20Expanded) - Eco Version: 9.5
 
-[**Dynamite Mod**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective-BuiltProjects/Dynamite) - Eco Version 9.4.5
+[**Dynamite Mod**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective-BuiltProjects/Dynamite) - Eco Version 9.5
+
 
 # Wanna See a mod on here?
 
@@ -67,6 +72,10 @@ Paper Milling Expanded - M3OWZ
 
 Dynamite Mod - Ondulas
 
+Wooden Bracers - DemonDog
+
+Wire Fences - Demon Dog
+
 ## Contributors
 NyElectrics 
 - Abrasivehorizon
@@ -81,3 +90,6 @@ Paper Milling Expanded
 
 Dynamite Mod
 - The Duke Of Rockford
+
+Wooden Bracers
+- Abrasivehorizon
