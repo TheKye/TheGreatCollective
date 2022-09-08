@@ -15,7 +15,7 @@ namespace Eco.Mods.TechTree
 {
     [Serialized]
     [RequireComponent(typeof(PropertyAuthComponent), null)]
-    [RequireComponent(typeof(SolidGroundComponent), null)]
+    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent), null)]
     [RequireComponent(typeof(DynamiteComponent), null)]
     public class OnduSmallDynamiteObject : WorldObject, IRepresentsItem
     {

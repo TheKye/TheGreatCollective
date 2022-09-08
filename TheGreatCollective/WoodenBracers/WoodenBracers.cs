@@ -33,7 +33,7 @@ namespace Eco.Mods.TechTree
 
     [Serialized]
     [RequireComponent(typeof(PropertyAuthComponent))]
-    [RequireComponent(typeof(SolidGroundComponent))]
+    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
     public partial class Wb1x3Object : WorldObject, IRepresentsItem
     {
         public override LocString DisplayName => Localizer.DoStr("Wooden Bracers 1x3");
@@ -52,7 +52,7 @@ namespace Eco.Mods.TechTree
 
     [Serialized]
     [RequireComponent(typeof(PropertyAuthComponent))]
-    [RequireComponent(typeof(SolidGroundComponent))]
+    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
     public partial class Wb1x5Object : WorldObject, IRepresentsItem
     {
         public override LocString DisplayName => Localizer.DoStr("Wooden Bracers 1x5");
@@ -70,7 +70,7 @@ namespace Eco.Mods.TechTree
 
     [Serialized]
     [RequireComponent(typeof(PropertyAuthComponent))]
-    [RequireComponent(typeof(SolidGroundComponent))]
+    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
     public partial class Wb3x3Object : WorldObject, IRepresentsItem
     {
         public override LocString DisplayName => Localizer.DoStr("Wooden Bracers 3x3");
@@ -87,7 +87,7 @@ namespace Eco.Mods.TechTree
 
     [Serialized]
     [RequireComponent(typeof(PropertyAuthComponent))]
-    [RequireComponent(typeof(SolidGroundComponent))]
+    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
     public partial class Wb3x5Object : WorldObject, IRepresentsItem
     {
         public override LocString DisplayName => Localizer.DoStr("Wooden Bracers 3x5");

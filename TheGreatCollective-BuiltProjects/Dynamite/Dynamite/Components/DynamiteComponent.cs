@@ -94,7 +94,7 @@ namespace Eco.Gameplay.Components
                                 if (flag4)
                                 {
                                     int num3 = this.user.Talentset.HasTalent(typeof(MiningLuckyBreakTalent)) ? 4 : -1;
-                                    RubbleObject.TrySpawnFromBlock(this.player, block.GetType(), vector3i, num3, null);
+                                    RubbleObject.TrySpawnFromBlock(this.player, block.GetType(), vector3i, num3);
                                 }
                                 else
                                 {
@@ -102,7 +102,7 @@ namespace Eco.Gameplay.Components
                                     if (flag5)
                                     {
                                         int num4 = this.user.Talentset.HasTalent(typeof(MiningLuckyBreakTalent)) ? 4 : -1;
-                                        RubbleObject.TrySpawnFromBlock(this.player, block.GetType(), vector3i, num4, null);
+                                        RubbleObject.TrySpawnFromBlock(this.player, block.GetType(), vector3i, num4);
                                     }
                                 }
                             }
@@ -121,7 +121,7 @@ namespace Eco.Gameplay.Components
                                 if (flag8)
                                 {
                                     int num5 = this.user.Talentset.HasTalent(typeof(MiningLuckyBreakTalent)) ? 4 : -1;
-                                    RubbleObject.TrySpawnFromBlock(this.player, block.GetType(), vector3i, num5, null);
+                                    RubbleObject.TrySpawnFromBlock(this.player, block.GetType(), vector3i, num5);
                                 }
                                 else
                                 {
@@ -129,7 +129,7 @@ namespace Eco.Gameplay.Components
                                     if (flag9)
                                     {
                                         int num6 = this.user.Talentset.HasTalent(typeof(MiningLuckyBreakTalent)) ? 4 : -1;
-                                        RubbleObject.TrySpawnFromBlock(this.player, block.GetType(), vector3i, num6, null);
+                                        RubbleObject.TrySpawnFromBlock(this.player, block.GetType(), vector3i, num6);
                                     }
                                 }
                             }

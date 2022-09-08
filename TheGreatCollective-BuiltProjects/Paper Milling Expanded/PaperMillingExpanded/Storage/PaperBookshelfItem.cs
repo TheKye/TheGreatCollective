@@ -13,6 +13,7 @@ using Eco.Shared.Items;
 using Eco.Shared.Localization;
 using Eco.Shared.Serialization;
 using static Eco.Gameplay.Housing.PropertyValues.HomeFurnishingValue;
+using Eco.Shared.Math;
 
 namespace Eco.Mods.TechTree
 {
@@ -23,7 +24,7 @@ namespace Eco.Mods.TechTree
     public class PaperBookshelfItem : WorldObjectItem<PaperBookshelfObject>
     {
         public override LocString DisplayDescription => Localizer.DoStr("A place to store knowledge and information; leads to the town hall.");
-
+        public override DirectionAxisFlags RequiresSurfaceOnSides { get; } = 0 | DirectionAxisFlags.Down;
         [TooltipChildren]
         public HomeFurnishingValue HousingTooltip => HousingVal;
 
@@ -42,7 +43,7 @@ namespace Eco.Mods.TechTree
     [RequireComponent(typeof(LinkComponent))]
     [RequireComponent(typeof(HousingComponent))]
     [RequireComponent(typeof(PublicStorageComponent))]
-    [RequireComponent(typeof(SolidGroundComponent))]
+    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
     public class PaperBookshelfObject : WorldObject, IRepresentsItem
     {
         public override LocString DisplayName => Localizer.DoStr("Paper Bookshelf");

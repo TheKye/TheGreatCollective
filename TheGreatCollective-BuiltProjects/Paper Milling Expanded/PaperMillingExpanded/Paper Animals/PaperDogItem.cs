@@ -13,6 +13,7 @@ using Eco.Shared.Items;
 using Eco.Shared.Localization;
 using Eco.Shared.Serialization;
 using static Eco.Gameplay.Housing.PropertyValues.HomeFurnishingValue;
+using Eco.Shared.Math;
 
 namespace Eco.Mods.TechTree
 {
@@ -24,6 +25,7 @@ namespace Eco.Mods.TechTree
     public class PaperDogItem : WorldObjectItem<PaperDogObject>
     {
         public override LocString DisplayDescription => Localizer.DoStr("A black dog.");
+        public override DirectionAxisFlags RequiresSurfaceOnSides { get; } = 0 | DirectionAxisFlags.Down;
 
         [TooltipChildren]
         public HomeFurnishingValue HousingTooltip => HousingVal;
@@ -41,7 +43,7 @@ namespace Eco.Mods.TechTree
     [Serialized]
     [RequireComponent(typeof(PropertyAuthComponent))]
     [RequireComponent(typeof(HousingComponent))]
-    [RequireComponent(typeof(SolidGroundComponent))]
+    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
     public class PaperDogObject : WorldObject, IRepresentsItem
     {
         public override LocString DisplayName => Localizer.DoStr("Paper Dog");
