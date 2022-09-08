@@ -15,6 +15,7 @@ using Eco.Shared.Serialization;
 using static Eco.Gameplay.Housing.PropertyValues.HomeFurnishingValue;
 using Eco.Gameplay.Property;
 using Eco.Gameplay.Modules;
+using Eco.Shared.Math;
 
 namespace Eco.Mods.TechTree
 {
@@ -25,7 +26,7 @@ namespace Eco.Mods.TechTree
     public class PaperMillingWorkBenchItem : WorldObjectItem<PaperMillingWorkBenchObject>, IPersistentData
     {
         public override LocString DisplayDescription => Localizer.DoStr("A table for Paper Milling. Size: 2x2x3");
-
+        public override DirectionAxisFlags RequiresSurfaceOnSides { get; } = 0 | DirectionAxisFlags.Down;
         [TooltipChildren]
         public HomeFurnishingValue HousingTooltip => HousingVal;
 
@@ -47,7 +48,7 @@ namespace Eco.Mods.TechTree
     [RequireComponent(typeof(LinkComponent))]
     [RequireComponent(typeof(CraftingComponent))]
     [RequireComponent(typeof(HousingComponent))]
-    [RequireComponent(typeof(SolidGroundComponent))]
+    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
     [RequireComponent(typeof(PluginModulesComponent))]
     [RequireComponent(typeof(RoomRequirementsComponent))]
     [RequireRoomContainment]
