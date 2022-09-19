@@ -51,7 +51,7 @@ namespace Eco.Mods.TechTree
     [RequireComponent(typeof(PowerGridComponent))]
     [RequireComponent(typeof(PowerConsumptionComponent))]
     [RequireComponent(typeof(HousingComponent))]
-    [RequireComponent(typeof(SolidGroundComponent))]
+    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
     [RequireComponent(typeof(LiquidConverterComponent))]
     [RequireComponent(typeof(PluginModulesComponent))]
     public partial class NyElectricBlastFurnaceObject : WorldObject, IRepresentsItem
@@ -69,9 +69,9 @@ namespace Eco.Mods.TechTree
             this.GetComponent<PowerConsumptionComponent>().Initialize(3000f);
             this.GetComponent<HousingComponent>().HomeValue = NyElectricBlastFurnaceItem.HousingVal;
 
-            this.GetComponent<LiquidProducerComponent>().Setup(typeof(SmogItem), 1, this.NamedOccupancyOffset("ChimneyOut"));
+            this.GetComponent<LiquidProducerComponent>().Setup(typeof(SmogItem), 1, this.GetOccupancyType(BlockOccupancyType.ChimneyOut));
             this.GetComponent<AirPollutionComponent>().Initialize(this.GetComponent<LiquidProducerComponent>());
-            this.GetComponent<LiquidConverterComponent>().Setup(typeof(WaterItem), typeof(SewageItem), this.NamedOccupancyOffset("WaterInputPort"), this.NamedOccupancyOffset("SewageOutputPort"), 0.3f, 0.9f);
+            this.GetComponent<LiquidConverterComponent>().Setup(typeof(WaterItem), typeof(SewageItem), this.GetOccupancyType(BlockOccupancyType.WaterInputPort), this.GetOccupancyType(BlockOccupancyType.SewageOutputPort), 0.3f, 0.9f);
         }
 
         public override void Destroy()
@@ -83,9 +83,9 @@ namespace Eco.Mods.TechTree
         {
             WorldObject.AddOccupancy<NyElectricBlastFurnaceObject>(new List<BlockOccupancy>() 
             { 
-                new BlockOccupancy(new Vector3i(1, 4, 1), typeof(PipeSlotBlock), new Quaternion(-0.7071071f, 2.634177E-07f, 2.634179E-07f, 0.7071065f), "ChimneyOut"), 
-                new BlockOccupancy(new Vector3i(2, 0, 2), typeof(PipeSlotBlock), new Quaternion(0f, 0f, 0f, 1f), "WaterInputPort"), 
-                new BlockOccupancy(new Vector3i(0, 0, 0), typeof(PipeSlotBlock), new Quaternion(0f, -0.7071068f, 0f, 0.7071068f), "SewageOutputPort"), 
+                new BlockOccupancy(new Vector3i(1, 4, 1), typeof(PipeSlotBlock), new Quaternion(-0.7071071f, 2.634177E-07f, 2.634179E-07f, 0.7071065f), BlockOccupancyType.ChimneyOut), 
+                new BlockOccupancy(new Vector3i(2, 0, 2), typeof(PipeSlotBlock), new Quaternion(0f, 0f, 0f, 1f), BlockOccupancyType.WaterInputPort), 
+                new BlockOccupancy(new Vector3i(0, 0, 0), typeof(PipeSlotBlock), new Quaternion(0f, -0.7071068f, 0f, 0.7071068f), BlockOccupancyType.SewageOutputPort), 
                 new BlockOccupancy(new Vector3i(0, 0, 1)), 
                 new BlockOccupancy(new Vector3i(0, 0, 2)), 
                 new BlockOccupancy(new Vector3i(0, 1, 0)), 

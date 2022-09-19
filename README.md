@@ -26,25 +26,27 @@ To Download the Files Click Code, Download Zip, Then Find the Folder you would l
 
 # Available Mods - As CS Files
 
-[**NyElectrics**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/NyElectrics) - Eco Version: 9.5 - Open Source Version [Here](https://github.com/tedoxdev/NyElectrics)
+[**NyElectrics**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/NyElectrics) - Eco Version: 9.6 - Open Source Version [Here](https://github.com/tedoxdev/NyElectrics)
 
-[**Seed Barrel**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/SeedBarrel) - Eco Version 9.5
+[**Seed Barrel**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/SeedBarrel) - Eco Version 9.6
 
-[**Conveyor Belts**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/ConveyorBelts) - Eco Version 9.5 - Open Source Version [Here](https://github.com/Elec0/eco-mods/tree/main/ConveyorBeltUpdate)
+[**Conveyor Belts**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/ConveyorBelts) - Eco Version 9.6 - Open Source Version [Here](https://github.com/Elec0/eco-mods/tree/main/ConveyorBeltUpdate)
 
-[**Lucky Pickaxe**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/LuckPickaxe) - Eco Version: 9.5
+[**Lucky Pickaxe**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/LuckPickaxe) - Eco Version: 9.6
 
-[**Modern Solar Panels**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/ModernSolarPanels) - Eco Version: 9.5
+[**Modern Solar Panels**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/ModernSolarPanels) - Eco Version: 9.6
 
-[**Wooden Bracers**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/WoodenBracers) - Eco Version 9.5
+[**Wooden Bracers**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/WoodenBracers) - Eco Version 9.6
 
-[**Wire Fences**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/WireFences) - Eco Version 9.5
+[**Wire Fences**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/WireFences) - Eco Version 9.6
+
+[**Steam Front Loader**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective/SteamFrontLoader) - Eco Version 9.6
 
 # Available Mods - as DLL Files
 
-[**Paper Milling Expanded**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective-BuiltProjects/Paper%20Milling%20Expanded) - Eco Version: 9.5
+[**Paper Milling Expanded**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective-BuiltProjects/Paper%20Milling%20Expanded) - Eco Version: 9.6
 
-[**Dynamite Mod**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective-BuiltProjects/Dynamite) - Eco Version 9.5
+[**Dynamite Mod**](https://github.com/TheKye/TheGreatCollective/tree/main/TheGreatCollective-BuiltProjects/Dynamite) - Eco Version 9.6
 
 
 # Wanna See a mod on here?
@@ -75,6 +77,8 @@ Dynamite Mod - Ondulas
 Wooden Bracers - DemonDog
 
 Wire Fences - Demon Dog
+
+Steam Front Loader - M3OWZ
 
 ## Contributors
 NyElectrics 

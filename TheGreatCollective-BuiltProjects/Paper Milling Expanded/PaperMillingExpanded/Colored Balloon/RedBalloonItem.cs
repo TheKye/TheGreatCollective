@@ -12,6 +12,7 @@ using Eco.Gameplay.Objects;
 using Eco.Shared.Items;
 using Eco.Shared.Localization;
 using Eco.Shared.Serialization;
+using Eco.Shared.Math;
 
 namespace Eco.Mods.TechTree
 {
@@ -23,6 +24,7 @@ namespace Eco.Mods.TechTree
     public class RedBalloonItem : WorldObjectItem<RedBalloonObject>
     {
         public override LocString DisplayDescription => Localizer.DoStr("For celebrating.");
+        public override DirectionAxisFlags RequiresSurfaceOnSides { get; } = 0 | DirectionAxisFlags.Down;
 
         [TooltipChildren]
         public HomeFurnishingValue HousingTooltip => RedBalloonItem.HousingVal;
@@ -40,7 +42,7 @@ namespace Eco.Mods.TechTree
     [Serialized]
     [RequireComponent(typeof(PropertyAuthComponent))]
     [RequireComponent(typeof(HousingComponent))]
-    [RequireComponent(typeof(SolidGroundComponent))]
+    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
     public class RedBalloonObject : WorldObject, IRepresentsItem
     {
         public override LocString DisplayName => Localizer.DoStr("Red Balloon");

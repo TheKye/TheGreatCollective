@@ -13,6 +13,7 @@ namespace Eco.Mods.TechTree
     using Eco.Gameplay.Items;
     using Eco.Gameplay.Objects;
     using Eco.Shared.Localization;
+    using Eco.Shared.Math;
     using Eco.Shared.Serialization;
 
     [Serialized]
@@ -33,7 +34,7 @@ namespace Eco.Mods.TechTree
 
     [Serialized]
     [RequireComponent(typeof(PropertyAuthComponent))]
-    [RequireComponent(typeof(SolidGroundComponent))]
+    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
     public partial class Wb1x3Object : WorldObject, IRepresentsItem
     {
         public override LocString DisplayName => Localizer.DoStr("Wooden Bracers 1x3");
@@ -52,7 +53,7 @@ namespace Eco.Mods.TechTree
 
     [Serialized]
     [RequireComponent(typeof(PropertyAuthComponent))]
-    [RequireComponent(typeof(SolidGroundComponent))]
+    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
     public partial class Wb1x5Object : WorldObject, IRepresentsItem
     {
         public override LocString DisplayName => Localizer.DoStr("Wooden Bracers 1x5");
@@ -70,7 +71,7 @@ namespace Eco.Mods.TechTree
 
     [Serialized]
     [RequireComponent(typeof(PropertyAuthComponent))]
-    [RequireComponent(typeof(SolidGroundComponent))]
+    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
     public partial class Wb3x3Object : WorldObject, IRepresentsItem
     {
         public override LocString DisplayName => Localizer.DoStr("Wooden Bracers 3x3");
@@ -87,7 +88,7 @@ namespace Eco.Mods.TechTree
 
     [Serialized]
     [RequireComponent(typeof(PropertyAuthComponent))]
-    [RequireComponent(typeof(SolidGroundComponent))]
+    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
     public partial class Wb3x5Object : WorldObject, IRepresentsItem
     {
         public override LocString DisplayName => Localizer.DoStr("Wooden Bracers 3x5");
@@ -107,7 +108,7 @@ namespace Eco.Mods.TechTree
     public partial class Wb1x2Item : WorldObjectItem<Wb1x2Object>
     {
         public override LocString DisplayDescription => Localizer.DoStr("");
-
+        public override DirectionAxisFlags RequiresSurfaceOnSides { get; } = 0 | DirectionAxisFlags.Down;
         static Wb1x2Item() { }
     }
 
@@ -116,7 +117,7 @@ namespace Eco.Mods.TechTree
     public partial class Wb1x3Item : WorldObjectItem<Wb1x3Object>
     {
         public override LocString DisplayDescription => Localizer.DoStr("A 1x3 Wooden Support structure.");
-
+        public override DirectionAxisFlags RequiresSurfaceOnSides { get; } = 0 | DirectionAxisFlags.Down;
         static Wb1x3Item() { }
     }
 
@@ -126,7 +127,7 @@ namespace Eco.Mods.TechTree
     public partial class Wb1x5Item : WorldObjectItem<Wb1x5Object>
     {
         public override LocString DisplayDescription => Localizer.DoStr("");
-
+        public override DirectionAxisFlags RequiresSurfaceOnSides { get; } = 0 | DirectionAxisFlags.Down;
         static Wb1x5Item() { }
     }
 
@@ -136,7 +137,7 @@ namespace Eco.Mods.TechTree
     public partial class Wb3x3Item : WorldObjectItem<Wb3x3Object>
     {
         public override LocString DisplayDescription => Localizer.DoStr("");
-
+        public override DirectionAxisFlags RequiresSurfaceOnSides { get; } = 0 | DirectionAxisFlags.Down;
         static Wb3x3Item() { }
     }
 
@@ -146,7 +147,7 @@ namespace Eco.Mods.TechTree
     public partial class Wb3x5Item : WorldObjectItem<Wb3x5Object>
     {
         public override LocString DisplayDescription => Localizer.DoStr("");
-
+        public override DirectionAxisFlags RequiresSurfaceOnSides { get; } = 0 | DirectionAxisFlags.Down;
         static Wb3x5Item() { }
     }
 }

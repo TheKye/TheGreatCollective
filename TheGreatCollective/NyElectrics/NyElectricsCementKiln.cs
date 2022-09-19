@@ -36,7 +36,7 @@ namespace NyElectrics
     [RequireComponent(typeof(PowerGridComponent))]
     [RequireComponent(typeof(PowerConsumptionComponent))]
     [RequireComponent(typeof(HousingComponent))]
-    [RequireComponent(typeof(SolidGroundComponent))]
+    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
     [RequireComponent(typeof(PluginModulesComponent))]
     [RequireComponent(typeof(RoomRequirementsComponent))]
     [RequireRoomContainment]
@@ -53,7 +53,7 @@ namespace NyElectrics
             this.GetComponent<MinimapComponent>().Initialize(Localizer.DoStr("Crafting"));
             this.GetComponent<HousingComponent>().HomeValue = NyElectricCementKilnItem.HousingVal;
             this.GetComponent<PowerGridComponent>().Initialize(10, new ElectricPower());
-            this.GetComponent<LiquidProducerComponent>().Setup(typeof(SmogItem), 1, this.NamedOccupancyOffset("ChimneyOut"));
+            this.GetComponent<LiquidProducerComponent>().Setup(typeof(SmogItem), 1, this.GetOccupancyType(BlockOccupancyType.ChimneyOut));
 
             this.GetComponent<PowerConsumptionComponent>().Initialize(3000f);
         }
@@ -64,7 +64,7 @@ namespace NyElectrics
         {
             WorldObject.AddOccupancy<NyElectricCementKilnObject>(new List<BlockOccupancy>() 
             { 
-                new BlockOccupancy(new Vector3i(0, 1, 0), typeof(PipeSlotBlock), new Quaternion(-0.7071068f, 0f, 0f, 0.7071068f), "ChimneyOut"), 
+                new BlockOccupancy(new Vector3i(0, 1, 0), typeof(PipeSlotBlock), new Quaternion(-0.7071068f, 0f, 0f, 0.7071068f), BlockOccupancyType.ChimneyOut), 
                 new BlockOccupancy(new Vector3i(0, 0, 0)), 
                 new BlockOccupancy(new Vector3i(1, 0, 0)), 
                 new BlockOccupancy(new Vector3i(1, 1, 0)), 
