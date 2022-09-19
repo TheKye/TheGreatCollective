@@ -9,6 +9,7 @@ using Eco.Gameplay.Objects;
 using Eco.Gameplay.Skills;
 using Eco.Gameplay.Systems.Chat;
 using Eco.Shared.Localization;
+using Eco.Shared.Math;
 using Eco.Shared.Serialization;
 
 namespace Eco.Mods.TechTree
@@ -59,6 +60,7 @@ namespace Eco.Mods.TechTree
         public class OnduMiddleDynamiteItem : WorldObjectItem<OnduMiddleDynamiteObject>
         {
             public override LocString DisplayDescription => Localizer.DoStr("Medium dynamite. It has a destruction diameter of 7 blocks and gives 25% rubbles.");
+            public override DirectionAxisFlags RequiresSurfaceOnSides { get; } = 0 | DirectionAxisFlags.Down;
         }
 
         [RequiresSkill(typeof(ElectronicsSkill), 1)]
