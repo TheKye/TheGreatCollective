@@ -105,6 +105,7 @@ namespace Eco.Mods.TechTree
     [RequireComponent(typeof(AirPollutionComponent))]
     [RequireComponent(typeof(VehicleComponent))]
     [RequireComponent(typeof(VehicleToolComponent))]
+    [RequireComponent(typeof(CustomTextComponent))]
     public class SteamFrontLoaderObject : PhysicsWorldObject
     {
         protected SteamFrontLoaderObject() { }
@@ -126,6 +127,7 @@ namespace Eco.Mods.TechTree
         {
             base.Initialize();
 
+            GetComponent<CustomTextComponent>().Initialize(30);
             this.GetComponent<FuelSupplyComponent>().Initialize(2, fuelTagList);
             this.GetComponent<FuelConsumptionComponent>().Initialize(25);
             this.GetComponent<AirPollutionComponent>().Initialize(0.5f);
