@@ -18,6 +18,7 @@ namespace Eco.Mods.TechTree
     using Eco.Shared.Serialization;
     using Eco.Shared.Items;
     using Eco.Gameplay.Housing.PropertyValues;
+    using Eco.Shared.Math;
 
     /// 1
     [Serialized]
@@ -289,7 +290,7 @@ typeof(BasicEngineeringUpgradeItem), })]
     public partial class dSawhorseWorkbenchItem : WorldObjectItem<dSawhorseWorkbenchObject>, IPersistentData
     {
         public override LocString DisplayDescription => Localizer.DoStr("A table for fences of all kind.");
-
+        public override DirectionAxisFlags RequiresSurfaceOnSides { get; } = 0 | DirectionAxisFlags.Down;
         static dSawhorseWorkbenchItem() { }
 
         [TooltipChildren] public HomeFurnishingValue HousingTooltip => HousingVal; 
