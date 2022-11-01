@@ -10,6 +10,7 @@ namespace Eco.Mods.TechTree
     using Eco.Gameplay.Systems.Tooltip;
     using Eco.Shared.Localization;
     using Eco.Shared.Serialization;
+    using Eco.Shared.Math;
 
     [Serialized]
     [LocDisplayName("Conveyor Belt")]
@@ -18,6 +19,7 @@ namespace Eco.Mods.TechTree
     {
         public override LocString DisplayDescription => Localizer.DoStr("Convey things with belts");
 
+        public override DirectionAxisFlags RequiresSurfaceOnSides { get; } = 0 | DirectionAxisFlags.Down;
         static ConveyorBeltItem() { }
     }
 
