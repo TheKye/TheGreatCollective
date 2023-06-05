@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,7 +10,7 @@
     <None Remove="LuckPickaxe\**" />
   </ItemGroup>
 <ItemGroup>
-    <PackageReference Include="Eco.ReferenceAssemblies" Version="0.9.6.1-beta-release-337" />
+    <PackageReference Include="Eco.ReferenceAssemblies" Version="0.9.7.13-beta-release-506" />
 	
 </ItemGroup>
  

@@ -25,11 +25,6 @@ namespace Eco.Mods.TechTree
         public virtual Type RepresentedItemType => typeof(Wb1x2Item);
 
         protected override void Initialize() { }
-
-        public override void Destroy()
-        {
-            base.Destroy();
-        }
     }
 
     [Serialized]
@@ -44,10 +39,6 @@ namespace Eco.Mods.TechTree
 
         protected override void Initialize() { }
 
-        public override void Destroy()
-        {
-            base.Destroy();
-        }
 
     }
 
@@ -63,10 +54,6 @@ namespace Eco.Mods.TechTree
 
         protected override void Initialize() { }
 
-        public override void Destroy()
-        {
-            base.Destroy();
-        }
     }
 
     [Serialized]
@@ -79,11 +66,6 @@ namespace Eco.Mods.TechTree
         public virtual Type RepresentedItemType => typeof(Wb3x3Item);
 
         protected override void Initialize() { }
-
-        public override void Destroy()
-        {
-            base.Destroy();
-        }
     }
 
     [Serialized]
@@ -97,10 +79,6 @@ namespace Eco.Mods.TechTree
 
         protected override void Initialize() { }
 
-        public override void Destroy()
-        {
-            base.Destroy();
-        }
     }
 
     [Serialized]

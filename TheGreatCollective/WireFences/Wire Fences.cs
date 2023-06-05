@@ -30,11 +30,6 @@ namespace Eco.Mods.TechTree
         public virtual Type RepresentedItemType => typeof(dWireFenceItem);
 
         protected override void Initialize() { }
-
-        public override void Destroy()
-        {
-            base.Destroy();
-        }
     }
 
     [Serialized]
@@ -57,11 +52,6 @@ namespace Eco.Mods.TechTree
         public virtual Type RepresentedItemType => typeof(dWireFenceBeginsItem);
 
         protected override void Initialize(){}
-
-        public override void Destroy()
-        {
-            base.Destroy();
-        }
     }
 
     [Serialized]
@@ -83,11 +73,6 @@ namespace Eco.Mods.TechTree
         public virtual Type RepresentedItemType => typeof(dWireFenceBrokenItem);
 
         protected override void Initialize() { }
-
-        public override void Destroy()
-        {
-            base.Destroy();
-        }
     }
 
     [Serialized]
@@ -109,11 +94,6 @@ namespace Eco.Mods.TechTree
         public virtual Type RepresentedItemType => typeof(dWireFenceCornerItem);
 
         protected override void Initialize() { }
-
-        public override void Destroy()
-        {
-            base.Destroy();
-        }
     }
 
     [Serialized]
@@ -135,11 +115,6 @@ namespace Eco.Mods.TechTree
         public virtual Type RepresentedItemType => typeof(dWireFenceDiagonalItem);
 
         protected override void Initialize() { }
-
-        public override void Destroy()
-        {
-            base.Destroy();
-        }
     }
 
     [Serialized]
@@ -161,11 +136,6 @@ namespace Eco.Mods.TechTree
         public virtual Type RepresentedItemType => typeof(dWireFenceDownItem);
 
         protected override void Initialize() { }
-
-        public override void Destroy()
-        {
-            base.Destroy();
-        }
     }
 
     [Serialized]
@@ -188,10 +158,6 @@ namespace Eco.Mods.TechTree
 
         protected override void Initialize() { }
 
-        public override void Destroy()
-        {
-            base.Destroy();
-        }
     }
 
     [Serialized]
@@ -214,10 +180,6 @@ namespace Eco.Mods.TechTree
 
         protected override void Initialize() { }
 
-        public override void Destroy()
-        {
-            base.Destroy();
-        }
     }
 
     [Serialized]
@@ -240,10 +202,6 @@ namespace Eco.Mods.TechTree
 
         protected override void Initialize() { }
 
-        public override void Destroy()
-        {
-            base.Destroy();
-        }
     }
 
     [Serialized]
@@ -272,18 +230,14 @@ namespace Eco.Mods.TechTree
 
         protected override void Initialize()
         {
-            this.GetComponent<MinimapComponent>().Initialize(Localizer.DoStr("Crafting"));
+            this.GetComponent<MinimapComponent>().SetCategory(Localizer.DoStr("Crafting"));
         }
 
-        public override void Destroy()
-        {
-            base.Destroy();
-        }
     }
 
     [Serialized]
     [LocDisplayName("Fence Workbench")]
-    [Ecopedia("Work Stations", "Craft Tables", createAsSubPage: true, display: InPageTooltip.DynamicTooltip)]
+    [Ecopedia("Work Stations", "Craft Tables")]
     [AllowPluginModules(Tags = new[] { "BasicUpgrade", }, ItemTypes = new[] { typeof(CarpentryBasicUpgradeItem),
 typeof(LoggingBasicUpgradeItem),
 typeof(BasicEngineeringUpgradeItem), })]
@@ -297,7 +251,7 @@ typeof(BasicEngineeringUpgradeItem), })]
         [TooltipChildren]
         public static HomeFurnishingValue HousingVal => new()
         {
-            Category = HomeFurnishingValue.RoomCategory.Industrial,
+            Category = RoomCategory.Industrial,
             TypeForRoomLimit = Localizer.DoStr(""),
         };
 

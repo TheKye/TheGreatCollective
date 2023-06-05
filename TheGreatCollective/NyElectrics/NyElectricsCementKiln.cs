@@ -50,15 +50,14 @@ namespace NyElectrics
 
         protected override void Initialize()
         {
-            this.GetComponent<MinimapComponent>().Initialize(Localizer.DoStr("Crafting"));
+            this.GetComponent<MinimapComponent>().SetCategory(Localizer.DoStr("Crafting"));
             this.GetComponent<HousingComponent>().HomeValue = NyElectricCementKilnItem.HousingVal;
             this.GetComponent<PowerGridComponent>().Initialize(10, new ElectricPower());
             this.GetComponent<LiquidProducerComponent>().Setup(typeof(SmogItem), 1, this.GetOccupancyType(BlockOccupancyType.ChimneyOut));
 
             this.GetComponent<PowerConsumptionComponent>().Initialize(3000f);
         }
-
-        public override void Destroy() => base.Destroy();
+        
 
         static NyElectricCementKilnObject()
         {
@@ -83,7 +82,7 @@ namespace NyElectrics
 
     [Serialized]
     [LocDisplayName("Electric Cement Kiln")]
-    [Ecopedia("Work Stations", "Craft Tables", createAsSubPage: true, display: InPageTooltip.DynamicTooltip)]
+    [Ecopedia("Work Stations", "Craft Tables")]
     [LiquidProducer(typeof(SmogItem), 1)]
     [AllowPluginModules(Tags = new[] { "AdvancedUpgrade" }, ItemTypes = new[] { typeof(MasonryAdvancedUpgradeItem) })]
     public partial class NyElectricCementKilnItem : WorldObjectItem<NyElectricCementKilnObject>
@@ -95,7 +94,7 @@ namespace NyElectrics
         [TooltipChildren] public HomeFurnishingValue HousingTooltip => HousingVal;
         public static readonly HomeFurnishingValue HousingVal = new()
         {
-            Category = HomeFurnishingValue.RoomCategory.Industrial,
+            Category = RoomCategory.Industrial,
             TypeForRoomLimit = Localizer.DoStr(""),
         };
     }

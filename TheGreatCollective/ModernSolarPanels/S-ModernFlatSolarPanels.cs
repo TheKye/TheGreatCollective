@@ -59,17 +59,13 @@ namespace Eco.Mods.TechTree
         protected override void Initialize()
         {
 
-            this.GetComponent<MinimapComponent>().Initialize(Localizer.DoStr("Power"));
+            this.GetComponent<MinimapComponent>().SetCategory(Localizer.DoStr("Power"));
             this.GetComponent<PowerGridComponent>().Initialize(30, new ElectricPower());
             this.GetComponent<PowerGeneratorComponent>().Initialize(800);
             this.GetComponent<HousingComponent>().HomeValue = ModernFlatSolarPanelsItem.HousingVal;
 
         }
 
-        public override void Destroy()
-        {
-            base.Destroy();
-        }
     }
 
     [Serialized]

@@ -64,7 +64,7 @@ namespace Eco.Mods.TechTree
     [Weight(1000)]
     [Category("Tool")]
     [Tag("Tool", 1)]
-    [Ecopedia("Items", "Tools", createAsSubPage: true, display: InPageTooltip.DynamicTooltip)]                    
+    [Ecopedia("Items", "Tools")]                    
     public partial class SteelLuckyPickaxeItem : LuckyPickaxeItem
     {
         // Static values

@@ -106,7 +106,7 @@ namespace Eco.Mods.TechTree
             Vector3i blockTop = wantedPosition + new Vector3i(0, 1, 0);
             Vector3i blockBottom = wantedPosition + new Vector3i(0, -1, 0);
 
-            IEnumerable<WorldObject> list = NetObjectManager.Default.GetObjectsWithin(this.Position3i, 7f).OfType<WorldObject>();
+            IEnumerable<WorldObject> list = NetObjectManager.Default.GetObjectsWithin(this.Position, 7f).OfType<WorldObject>();
             if (list == null) return;
 
             foreach (WorldObject item in list)

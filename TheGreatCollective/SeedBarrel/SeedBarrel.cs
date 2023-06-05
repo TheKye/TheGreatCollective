@@ -67,17 +67,11 @@ namespace Eco.Mods.TechTree
             storage.Storage.AddInvRestriction(new StackLimitRestriction(1600));
             this.GetComponent<LinkComponent>().Initialize(2);
         }
-
-        public override void Destroy()
-        {
-            base.Destroy();
-        }
-       
     }
 
     [Serialized]
     [LocDisplayName("Seed Barrel")]
-    [Ecopedia("Crafted Objects", "Storage", createAsSubPage: true, display: InPageTooltip.DynamicTooltip)]
+    [Ecopedia("Crafted Objects", "Storage")]
 
     public partial class SeedBarrelItem :
         WorldObjectItem<SeedBarrelObject> 

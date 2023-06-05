@@ -64,7 +64,7 @@ namespace Eco.Mods.TechTree
 
         protected override void Initialize()
         {
-            this.GetComponent<MinimapComponent>().Initialize(Localizer.DoStr("Crafting"));
+            this.GetComponent<MinimapComponent>().SetCategory(Localizer.DoStr("Crafting"));
             this.GetComponent<PowerGridComponent>().Initialize(10, new ElectricPower());
             this.GetComponent<PowerConsumptionComponent>().Initialize(3000f);
             this.GetComponent<HousingComponent>().HomeValue = NyElectricBlastFurnaceItem.HousingVal;
@@ -72,11 +72,6 @@ namespace Eco.Mods.TechTree
             this.GetComponent<LiquidProducerComponent>().Setup(typeof(SmogItem), 1, this.GetOccupancyType(BlockOccupancyType.ChimneyOut));
             this.GetComponent<AirPollutionComponent>().Initialize(this.GetComponent<LiquidProducerComponent>());
             this.GetComponent<LiquidConverterComponent>().Setup(typeof(WaterItem), typeof(SewageItem), this.GetOccupancyType(BlockOccupancyType.WaterInputPort), this.GetOccupancyType(BlockOccupancyType.SewageOutputPort), 0.3f, 0.9f);
-        }
-
-        public override void Destroy()
-        {
-            base.Destroy();
         }
 
         static NyElectricBlastFurnaceObject()
@@ -134,7 +129,7 @@ namespace Eco.Mods.TechTree
 
     [Serialized]
     [LocDisplayName("Electric Blast Furnace")]
-    [Ecopedia("Work Stations", "Craft Tables", createAsSubPage: true, display: InPageTooltip.DynamicTooltip)]
+    [Ecopedia("Work Stations", "Craft Tables")]
     [LiquidProducer(typeof(SmogItem), 1)]
     [AllowPluginModules(Tags = new[] { "AdvancedUpgrade", }, ItemTypes = new[] { typeof(AdvancedSmeltingUpgradeItem), typeof(SmeltingUpgradeItem), })]
     public partial class NyElectricBlastFurnaceItem : WorldObjectItem<NyElectricBlastFurnaceObject>, IPersistentData

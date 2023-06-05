@@ -23,7 +23,7 @@ namespace Eco.Mods.TechTree
     [Weight(20000)]
     [AirPollution(0.5f)]
     [Tag("Excavation")]
-    [Ecopedia("Crafted Objects", "Vehicles", createAsSubPage: true, display: InPageTooltip.DynamicTooltip)]
+    [Ecopedia("Crafted Objects", "Vehicles")]
     public partial class SteamFrontLoaderItem : WorldObjectItem<SteamFrontLoaderObject>
     {
         public override LocString DisplayDescription { get { return Localizer.DoStr("Small scale bucket loader. Great for flat to low slope excavation."); } }
